@@ -6,8 +6,6 @@ $(document).ready(function() {
 });
 
 function enable() {
-    $('#calculateButton').on('click', clickedCalculate);
-    $('#clearButton').on('click', clickedClear);
     $(document).on('click', '.number-key', clickedNumberKey);
     $(document).on('click', '.operator-key', clickedOperatorKey);
     $(document).on('click', '.equals-key', clickedEqualsKey);
