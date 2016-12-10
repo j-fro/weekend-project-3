@@ -1,7 +1,30 @@
-.no-input {
-    border: 3px solid red;
+body {
+    font-size: 32px;
 }
 
-p {
-    display: inline;
+.calculator-key {
+    box-sizing: border-box;
+    height: 100px;
+    width: 100px;
+    margin: 5px;
+    padding: 5px;
+    font-size: 32px;
+}
+
+.display {
+    box-sizing: border-box;
+    margin: 5px;
+    display: inline-block;;
+}
+
+.answer-output {
+    border: 1px solid black;
+    display: inline-block;;
+    /*height: 100px;*/
+    line-height: 90px;
+    width: 320px;
+    box-sizing: border-box;
+    margin: 5px;
+    padding: 5px;
+    text-align: right;
 }
