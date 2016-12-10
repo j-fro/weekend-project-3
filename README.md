@@ -16,7 +16,7 @@ Technologies:
 To-Dos:
 -------
 1. ~~Setup listening server~~
-2. Create base url
+2. ~~Create base url~~
 3. Create standard calculation route
     * Test with Postman
 4. Build user entry UI

@@ -11,6 +11,12 @@ app.use(bodyParser.urlencoded({extended: false}));
 // Expose public folder
 app.use(express.static(path.join(__dirname, '../public')));
 
+// base url
+app.get('/', function(req, res) {
+    console.log('Hit base url');
+    res.sendFile(path.join(__dirname, '../views/index.html'));
+});
+
 // Listen on port 3000
 app.listen(port, function() {
     console.log('Listening on port', port);
