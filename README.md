@@ -27,5 +27,5 @@ To-Dos:
         * ~~Calculate button~~
         * ~~Output~~
         * ~~Clear button~~
-5. Collect user input and send to server
-6. Receive response and display output
+5. ~~Collect user input and send to server~~
+6. ~~Receive response and display output~~
