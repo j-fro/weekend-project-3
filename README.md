@@ -19,13 +19,13 @@ To-Dos:
 2. ~~Create base url~~
 3. ~~Create standard calculation route~~
     * ~~Test with Postman~~
-4. Build user entry UI
-    * Basic UI goal:
-        * First number entry
-        * Second number entry
-        * Operation select
-        * Calculate button
-        * Output
-        * Clear button
+4. ~~Build user entry UI~~
+    * ~~Basic UI goal:~~
+        * ~~First number entry~~
+        * ~~Second number entry~~
+        * ~~Operation select~~
+        * ~~Calculate button~~
+        * ~~Output~~
+        * ~~Clear button~~
 5. Collect user input and send to server
 6. Receive response and display output
