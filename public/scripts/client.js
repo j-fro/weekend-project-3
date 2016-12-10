@@ -19,6 +19,9 @@ function clickedCalculate() {
         $('#secondNumIn').addClass('no-input');
     } else {
         var operation = $('#operationIn').val();
+        $('#firstNumIn').val('').removeClass('no-input');
+        $('#secondNumIn').val('').removeClass('no-input');
+        $('#operationIn').val('Add');
         var objectToSend = {
             x: x,
             y: y,
@@ -38,8 +41,8 @@ function clickedCalculate() {
 
 function clickedClear() {
     console.log('clear');
-    $('#firstNumIn').val('');
-    $('#secondNumIn').val('');
+    $('#firstNumIn').val('').removeClass('no-input');
+    $('#secondNumIn').val('').removeClass('no-input');
     $('#operationIn').val('Add');
     $('#answerOut').text('');
 }
