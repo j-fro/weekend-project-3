@@ -19,11 +19,31 @@ app.get('/', function(req, res) {
     res.sendFile(path.join(__dirname, '../views/index.html'));
 });
 
-app.post('/', function(req, res) {
-    console.log('Hit calc post with req.body', req.body);
-    var answer = calculate(req.body.x, req.body.y, req.body.type);
+app.post('/Add', function(req, res) {
+    console.log('adding', req.body.x, req.body.y);
     res.send({
-        answer: answer
+        answer: (Number(req.body.x) + Number(req.body.y))
+    });
+});
+
+app.post('/Subtract', function(req, res) {
+    console.log('subtracting', req.body.x, req.body.y);
+    res.send({
+        answer: (Number(req.body.x) - Number(req.body.y))
+    });
+});
+
+app.post('/Divide', function(req, res) {
+    console.log('dividing', req.body.x, req.body.y);
+    res.send({
+        answer: (Number(req.body.x) / Number(req.body.y))
+    });
+});
+
+app.post('/Multiply', function(req, res) {
+    console.log('multiplying', req.body.x, req.body.y);
+    res.send({
+        answer: (Number(req.body.x) * Number(req.body.y))
     });
 });
 
@@ -31,17 +51,3 @@ app.post('/', function(req, res) {
 app.listen(port, function() {
     console.log('Listening on port', port);
 });
-
-function calculate(x, y, operation) {
-    console.log('Calculating:', x, operation, y);
-    switch (operation) {
-        case 'Add':
-            return Number(x) + Number(y);
-        case 'Subtract':
-            return Number(x) - Number(y);
-        case 'Multiply':
-            return Number(x) * Number(y);
-        case 'Divide':
-            return Number(x) / Number(y);
-    }
-}

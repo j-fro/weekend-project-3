@@ -38,7 +38,7 @@ function clickedEqualsKey() {
         objectToSend.type !== 'undefined') {
         objectToSend.y = Number(currentValue);
         $.ajax({
-            url: '/',
+            url: '/' + objectToSend.type,
             type: 'POST',
             data: objectToSend,
             success: function(response) {
