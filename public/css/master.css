@@ -1,5 +1,12 @@
 body {
     font-size: 32px;
+    font-family: monospace;
+    margin: auto;
+}
+
+.calculator {
+    display: inline-block;
+    margin: auto;
 }
 
 .calculator-key {
@@ -9,6 +16,7 @@ body {
     margin: 5px;
     padding: 5px;
     font-size: 32px;
+    font-family: monospace;
 }
 
 .display {
@@ -18,11 +26,9 @@ body {
 }
 
 .answer-output {
-    border: 1px solid black;
     display: inline-block;;
-    /*height: 100px;*/
     line-height: 90px;
-    width: 320px;
+    width: 357px;
     box-sizing: border-box;
     margin: 5px;
     padding: 5px;

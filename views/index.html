@@ -6,43 +6,53 @@
     <title>Tau Weekend Calculator</title>
     <script src="scripts/jquery.min.js" charset="utf-8"></script>
     <script src="scripts/client.js" charset="utf-8"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/master.css">
 </head>
 
 <body>
+    <div class="container col-xs-6 col-xs-offset-3">
     <div class="calculator">
-<button type="button" class="calculator-key clear-key" data-value="Clear">CLR</button>
-        <div class="display">
 
+        <div class="display-row row">
+            <button type="button" class="calculator-key clear-key btn" data-value="Clear">CLR</button>
             <p class="answer-output"></p>
         </div>
         <div class="calculator-keys">
-            <div class="top-row">
-                <button type="button" class="calculator-key number-key" data-value="7">7</button>
-                <button type="button" class="calculator-key number-key" data-value="8">8</button>
-                <button type="button" class="calculator-key number-key" data-value="9">9</button>
-                <button type="button" class="calculator-key operator-key" data-value="Divide">/</button>
+            <div class="top-row row">
+                <button type="button" class="calculator-key number-key btn" data-value="7">7</button>
+                <button type="button" class="calculator-key number-key btn" data-value="8">8</button>
+                <button type="button" class="calculator-key number-key btn" data-value="9">9</button>
+                <button type="button" class="calculator-key operator-key btn" data-value="Divide">/</button>
             </div>
-            <div class="middle-top-row">
-                <button type="button" class="calculator-key number-key" data-value="4">4</button>
-                <button type="button" class="calculator-key number-key" data-value="5">5</button>
-                <button type="button" class="calculator-key number-key" data-value="6">6</button>
-                <button type="button" class="calculator-key operator-key" data-value="Multiply">*</button>
+            <div class="middle-top-row row">
+                <button type="button" class="calculator-key number-key btn" data-value="4">4</button>
+                <button type="button" class="calculator-key number-key btn" data-value="5">5</button>
+                <button type="button" class="calculator-key number-key btn" data-value="6">6</button>
+                <button type="button" class="calculator-key operator-key btn" data-value="Multiply">*</button>
             </div>
-            <div class="middle-botom-row">
-                <button type="button" class="calculator-key number-key" data-value="1">1</button>
-                <button type="button" class="calculator-key number-key" data-value="2">2</button>
-                <button type="button" class="calculator-key number-key" data-value="3">3</button>
-                <button type="button" class="calculator-key operator-key" data-value="Subtract">-</button>
+            <div class="middle-bottom-row row">
+                <button type="button" class="calculator-key number-key btn" data-value="1">1</button>
+                <button type="button" class="calculator-key number-key btn" data-value="2">2</button>
+                <button type="button" class="calculator-key number-key btn" data-value="3">3</button>
+                <button type="button" class="calculator-key operator-key btn" data-value="Subtract">-</button>
             </div>
-            <div class="bottom-row">
-                <button type="button" class="calculator-key number-key" data-value="0">0</button>
-                <button type="button" class="calculator-key number-key" data-value=".">.</button>
-                <button type="button" class="calculator-key equals-key" data-value="=">=</button>
-                <button type="button" class="calculator-key operator-key" data-value="Add">+</button>
+            <div class="bottom-row row">
+                <button type="button" class="calculator-key number-key btn" data-value="0">0</button>
+                <button type="button" class="calculator-key decimal-key btn" data-value=".">.</button>
+                <button type="button" class="calculator-key equals-key btn" data-value="=">=</button>
+                <button type="button" class="calculator-key operator-key btn" data-value="Add">+</button>
             </div>
         </div>
     </div>
+</div>
 </body>
 
 </html>
