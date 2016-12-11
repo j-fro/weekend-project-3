@@ -21,13 +21,19 @@
     <!-- <div class="container col-xs-6 col-xs-offset-3"> -->
         <div class="calculator container">
             <div class="row">
-                <button type="button" class="calculator-key clear-key btn col-xs-1 col-xs-offset-4" data-value="Clear">CLR</button>
-                <p class="answer-output col-xs-3"></p>
+                <button type="button" class="calculator-key btn col-xs-4 col-xs-offset-4">Tau Calculator</button>
+            </div>
+            <div class="display row">
+                <p class="answer-output col-xs-4 col-xs-offset-4"></p>
             </div>
             <!-- <div class="calculator-keys"> -->
 
                 <div class="row">
-                    <button type="button" class="calculator-key square-key btn col-xs-1 col-xs-offset-4" data-value="Square">x^2</button>
+                    <button type="button" class="calculator-key clear-key btn btn-danger col-xs-1 col-xs-offset-4" data-value="Clear">CLR</button>
+                    <!-- <button type="button" class="calculator-key single-val-op-key btn col-xs-1" data-value="Square">x&#x00B2</button> -->
+                    <button type="button" class="calculator-key number-key btn col-xs-1" data-value="6.2831853071">&#x03c4</button>
+                    <button type="button" class="calculator-key operator-key btn col-xs-1" data-value="Power">x<sup>y</sup></button>
+                    <button type="button" class="calculator-key single-val-op-key btn col-xs-1" data-value="Percent">&#37</button>
                 </div>
                 <div class="row">
                     <button type="button" class="calculator-key number-key btn col-xs-1 col-xs-offset-4" data-value="7">7</button>
@@ -50,7 +56,7 @@
                 <div class="row">
                     <button type="button" class="calculator-key number-key btn col-xs-1 col-xs-offset-4" data-value="0">0</button>
                     <button type="button" class="calculator-key decimal-key btn col-xs-1" data-value=".">.</button>
-                    <button type="button" class="calculator-key equals-key btn col-xs-1" data-value="=">=</button>
+                    <button type="button" class="calculator-key equals-key btn btn-primary col-xs-1" data-value="=">=</button>
                     <button type="button" class="calculator-key operator-key btn col-xs-1" data-value="Add">+</button>
                 </div>
             </div>

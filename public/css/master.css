@@ -3,6 +3,10 @@ body {
     font-family: monospace;
 }
 
+.display {
+    height: 80px;
+}
+
 .calculator-key {
     height: 80px;
     font-size: 32px;

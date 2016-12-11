@@ -14,7 +14,7 @@ function enable() {
     $(document).on('click', '.equals-key', clickedEqualsKey);
     $(document).on('click', '.clear-key', clickedClearKey);
     $(document).on('click', '.decimal-key', clickedDecimalKey);
-    $(document).on('click', '.square-key', clickedSquareKey);
+    $(document).on('click', '.single-val-op-key', clickedSingleValOpKey);
 }
 
 function clickedNumberKey() {
@@ -56,7 +56,7 @@ function clickedDecimalKey() {
     }
 }
 
-function clickedSquareKey() {
+function clickedSingleValOpKey() {
     /* Stores the currently displayed value (if present) and then immediately
     POSTs the object to the server without waiting for a y value */
     console.log('clicked square key');
@@ -67,7 +67,7 @@ function clickedSquareKey() {
         objectToSend.x = Number(currentValue);
         // Reset the display
         $('.answer-output').text('');
-        objectToSend.type = 'Square';
+        objectToSend.type = $(this).data().value;
         getAnswerFromServer(objectToSend);
     }
 }
@@ -83,7 +83,7 @@ function clickedEqualsKey() {
         objectToSend.x !== 'undefined' &&
         objectToSend.type !== 'undefined') {
         // Add the current value to the object
-        objectToSend.y = Number(currentValue);        
+        objectToSend.y = Number(currentValue);
         getAnswerFromServer(objectToSend);
     }
 }

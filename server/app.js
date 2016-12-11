@@ -50,7 +50,21 @@ app.post('/Multiply', function(req, res) {
 app.post('/Square', function(req, res) {
     console.log('squaring', req.body.x);
     res.send({
-        answer: (Number(req.body.x) * Number(req.body.x))
+        answer: Math.pow(Number(req.body.x), 2)
+    });
+});
+
+app.post('/Power', function(req, res) {
+    console.log('raising', req.body.x, 'to the power', req.body.y);
+    res.send({
+        answer: Math.pow(Number(req.body.x), Number(req.body.y))
+    });
+});
+
+app.post('/Percent', function(req, res) {
+    console.log('converting', req.body.x, 'to percent');
+    res.send({
+        answer: (Number(req.body.x) / 100)
     });
 });
 
