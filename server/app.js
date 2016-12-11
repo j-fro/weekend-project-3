@@ -47,6 +47,13 @@ app.post('/Multiply', function(req, res) {
     });
 });
 
+app.post('/Square', function(req, res) {
+    console.log('squaring', req.body.x);
+    res.send({
+        answer: (Number(req.body.x) * Number(req.body.x))
+    });
+});
+
 // Listen on port 3000
 app.listen(port, function() {
     console.log('Listening on port', port);

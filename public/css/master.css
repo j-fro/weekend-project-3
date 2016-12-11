@@ -1,36 +1,16 @@
 body {
     font-size: 32px;
     font-family: monospace;
-    margin: auto;
-}
-
-.calculator {
-    display: inline-block;
-    margin: auto;
 }
 
 .calculator-key {
-    box-sizing: border-box;
-    height: 100px;
-    width: 100px;
-    margin: 5px;
-    padding: 5px;
+    height: 80px;
     font-size: 32px;
     font-family: monospace;
-}
-
-.display {
-    box-sizing: border-box;
-    margin: 5px;
-    display: inline-block;;
+    border: 1px solid black;
 }
 
 .answer-output {
-    display: inline-block;;
-    line-height: 90px;
-    width: 357px;
-    box-sizing: border-box;
-    margin: 5px;
-    padding: 5px;
     text-align: right;
+    line-height: 70px;
 }

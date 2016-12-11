@@ -14,6 +14,7 @@ function enable() {
     $(document).on('click', '.equals-key', clickedEqualsKey);
     $(document).on('click', '.clear-key', clickedClearKey);
     $(document).on('click', '.decimal-key', clickedDecimalKey);
+    $(document).on('click', '.square-key', clickedSquareKey);
 }
 
 function clickedNumberKey() {
@@ -55,6 +56,22 @@ function clickedDecimalKey() {
     }
 }
 
+function clickedSquareKey() {
+    /* Stores the currently displayed value (if present) and then immediately
+    POSTs the object to the server without waiting for a y value */
+    console.log('clicked square key');
+    var currentValue = $('.answer-output').text();
+    // Don't overwrite a saved value with a blank value
+    if (currentValue.length > 0) {
+        // Save the currently displayed value to the global object
+        objectToSend.x = Number(currentValue);
+        // Reset the display
+        $('.answer-output').text('');
+        objectToSend.type = 'Square';
+        getAnswerFromServer(objectToSend);
+    }
+}
+
 function clickedEqualsKey() {
     /* Verifies that all required object values are present then POSTs the
     object to the server and displays the response */
@@ -66,19 +83,24 @@ function clickedEqualsKey() {
         objectToSend.x !== 'undefined' &&
         objectToSend.type !== 'undefined') {
         // Add the current value to the object
-        objectToSend.y = Number(currentValue);
-        // POST to the URL represented by the object.type
-        $.ajax({
-            url: '/' + objectToSend.type,
-            type: 'POST',
-            data: objectToSend,
-            success: function(response) {
-                // Add the answer to the display
-                $('.answer-output').text(response.answer);
-                answer = true;
-            }
-        });
+        objectToSend.y = Number(currentValue);        
+        getAnswerFromServer(objectToSend);
     }
+}
+
+function getAnswerFromServer(objectToSend) {
+    /* POSTs the object to the server and displays the response */
+    $.ajax({
+        // POST to the URL represented by the object.type
+        url: '/' + objectToSend.type,
+        type: 'POST',
+        data: objectToSend,
+        success: function(response) {
+            // Add the answer to the display
+            $('.answer-output').text(response.answer);
+            answer = true;
+        }
+    });
 }
 
 function clickedClearKey() {
